@@ -1,0 +1,187 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}제주도 노을 맛집 지도{% endblock %}
+
+{% block extra_head %}
+{% if kakao_map_key %}
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey={{ kakao_map_key }}&libraries=services"></script>
+{% endif %}
+<style>
+  body { overflow: hidden; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="map-layout">
+
+  <!-- ── 좌측 사이드바 ── -->
+  <aside class="map-sidebar">
+
+    <!-- 일몰 정보 + 날짜 선택 -->
+    <div class="sidebar-header">
+      <div class="sidebar-sunset">
+        <span class="sidebar-sunset-icon">🌅</span>
+        <div class="sidebar-sunset-info">
+          <div class="sidebar-sunset-time" id="sidebar-sunset-time">
+            일몰 {{ sunset.sunset_time }}
+          </div>
+          <div class="sidebar-sunset-dir" id="sidebar-sunset-dir">
+            {{ sunset.direction_kor }} · {{ sunset.azimuth }}°
+          </div>
+        </div>
+        {% if not kakao_map_key %}
+        <button class="search-btn" style="padding:6px 10px;font-size:11px;" onclick="toggleWeather()">🌤</button>
+        {% else %}
+        <button class="search-btn" style="padding:6px 10px;font-size:11px;background:var(--accent);" onclick="toggleWeather()">🌤</button>
+        {% endif %}
+      </div>
+
+      <div class="sidebar-date-wrap">
+        <span class="sidebar-date-label">📅 날짜</span>
+        <input type="date" id="date-picker" value="{{ today }}" onchange="onDateChange()">
+      </div>
+    </div>
+
+    <!-- 장소 검색 -->
+    <div class="sidebar-search">
+      <div class="search-row">
+        <input type="text" id="search-input" class="search-input"
+               placeholder="이름·주소·태그로 검색..."
+               oninput="searchPlaces()"
+               onkeydown="if(event.key==='Escape'){this.value='';resetSearch();}">
+        <button class="search-btn" onclick="document.getElementById('search-input').value='';resetSearch();">✕</button>
+      </div>
+      <div style="margin-top:6px;">
+        <button onclick="resetSearch()" style="background:none;border:none;color:var(--text-muted);font-size:12px;cursor:pointer;font-family:inherit;">
+          ↩ 추천 명소로 돌아가기
+        </button>
+      </div>
+    </div>
+
+    <!-- 명소 목록 -->
+    <div class="sidebar-list-header" id="sidebar-list-header" style="display:flex;align-items:center;justify-content:space-between;">
+      <span>🔥 오늘 추천 명소</span>
+      <button onclick="openCriteriaModal()" style="background:none;border:none;color:var(--text-muted);font-size:12px;cursor:pointer;font-family:inherit;padding:2px 6px;border-radius:6px;transition:background 0.15s;" onmouseover="this.style.background='var(--primary-light)'" onmouseout="this.style.background='none'">점수 기준 ℹ️</button>
+    </div>
+    <div class="sidebar-list" id="sidebar-spots-list"></div>
+
+  </aside>
+
+  <!-- ── 지도 영역 ── -->
+  <div class="map-main">
+    {% if not kakao_map_key %}
+    <div id="map-placeholder">
+      <div class="placeholder-content">
+        <div class="placeholder-icon">🗺️</div>
+        <h2>카카오맵 API 키가 필요합니다</h2>
+        <p>.env 파일에 <code>KAKAO_MAP_KEY</code>를 설정해주세요</p>
+        <p style="margin-top:12px;font-size:13px;color:var(--text-muted);">
+          👉 <a href="https://developers.kakao.com" target="_blank" style="color:var(--primary);">developers.kakao.com</a>에서 발급 가능
+        </p>
+      </div>
+    </div>
+    {% else %}
+    <div id="map"></div>
+    {% endif %}
+
+    <!-- 명소 팝업 (마커 클릭 시) -->
+    <div id="spot-popup" class="spot-popup hidden">
+      <button class="popup-close" onclick="closePopup()">✕</button>
+      <div id="popup-content"></div>
+    </div>
+
+    <!-- 태양 경로 토글 버튼 -->
+    <button id="sun-path-btn" class="sun-path-btn" onclick="toggleSunPath()">☀️ 해 경로 보기</button>
+
+    <!-- 날씨 패널 -->
+    <div id="weather-panel" class="weather-panel hidden">
+      <div class="weather-header">
+        <span>제주도 현재 날씨</span>
+        <button onclick="toggleWeather()" class="close-btn">✕</button>
+      </div>
+      <div id="weather-content" class="weather-content">
+        <div class="loading-spinner">날씨 불러오는 중...</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- 명소 데이터 주입 -->
+<script>
+  const SPOTS_DATA    = {{ spots_json|safe }};
+  const SUNSET_AZIMUTH = {{ sunset.azimuth }};
+  const TODAY_STR     = '{{ today }}';
+</script>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{% static 'js/map.js' %}?v=7"></script>
+<script>
+  // 사이드바 초기화
+  renderSidebarSpots(SPOTS_DATA);
+
+  // 날짜 피커 초기값
+  document.getElementById('date-picker').value = TODAY_STR;
+
+  {% if kakao_map_key %}
+  initKakaoMap(SPOTS_DATA, SUNSET_AZIMUTH);
+  {% endif %}
+
+  // ── 날씨 패널 ──────────────────────────────────────
+  function toggleWeather() {
+    const panel = document.getElementById('weather-panel');
+    if (panel.classList.contains('hidden')) {
+      panel.classList.remove('hidden');
+      fetchWeather();
+    } else {
+      panel.classList.add('hidden');
+    }
+  }
+
+  function fetchWeather() {
+    fetch('/spots/api/weather/')
+      .then(r => r.json())
+      .then(data => {
+        const el = document.getElementById('weather-content');
+        if (data.weather) {
+          const w = data.weather;
+          const q = w.sunset_quality;
+          el.innerHTML = `
+            <div class="weather-row">
+              <img src="https://openweathermap.org/img/wn/${w.icon}@2x.png" class="weather-icon-img" alt="${w.description}">
+              <div class="weather-main">
+                <span class="weather-temp">${w.temp}°C</span><br>
+                <span class="weather-desc">${w.description}</span>
+              </div>
+            </div>
+            <div class="weather-details">
+              <div class="weather-item">💧 습도 ${w.humidity}%</div>
+              <div class="weather-item">💨 바람 ${w.wind_speed}km/h</div>
+              <div class="weather-item">☁️ 구름 ${w.clouds}%</div>
+              <div class="weather-item">👁️ 시정 ${w.visibility}km</div>
+            </div>
+            <div class="sunset-quality" style="background:${q.color}18;border-left:4px solid ${q.color}">
+              <span style="color:${q.color}">${q.emoji} 노을 기대지수: <strong>${q.score}점</strong> (${q.level})</span>
+            </div>
+          `;
+        } else {
+          el.innerHTML = '<p class="weather-error">날씨 정보를 불러올 수 없습니다.<br><small>OPENWEATHER_API_KEY를 설정해주세요.</small></p>';
+        }
+      })
+      .catch(() => {
+        document.getElementById('weather-content').innerHTML = '<p class="weather-error">날씨 정보 로드 실패</p>';
+      });
+  }
+
+  // 메시지 자동 사라짐
+  setTimeout(() => {
+    document.querySelectorAll('.alert').forEach(el => {
+      el.style.opacity = '0';
+      setTimeout(() => el.remove(), 300);
+    });
+  }, 3000);
+</script>
+{% endblock %}

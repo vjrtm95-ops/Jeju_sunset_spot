@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입 - 제주도 노을 맛집</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="auth-body">
+  <div class="auth-bg">
+    <div class="auth-overlay"></div>
+    <div class="auth-card">
+      <div class="auth-header">
+        <div class="auth-logo">🌅</div>
+        <h1 class="auth-title">회원가입</h1>
+        <p class="auth-subtitle">제주 노을 커뮤니티에 오신 걸 환영합니다</p>
+      </div>
+
+      <form method="post" class="auth-form">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="form-group">
+          <label class="form-label">{{ field.label }}</label>
+          {{ field }}
+          {% if field.help_text %}
+          <span class="form-help">{{ field.help_text }}</span>
+          {% endif %}
+          {% if field.errors %}
+          <span class="form-error">{{ field.errors.0 }}</span>
+          {% endif %}
+        </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary btn-full">가입하기</button>
+      </form>
+
+      <div class="auth-footer">
+        <p>이미 계정이 있으신가요? <a href="{% url 'accounts:login' %}" class="auth-link">로그인</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

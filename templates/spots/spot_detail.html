@@ -1,0 +1,251 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ spot.name }} - 제주도 노을 맛집{% endblock %}
+
+{% block content %}
+<div class="detail-page">
+
+  <!-- 헤더 -->
+  <div class="detail-hero">
+    {% with cover=spot.get_cover %}
+    {% if cover %}
+    <img src="{{ cover }}" alt="{{ spot.name }}" class="detail-hero-img">
+    {% else %}
+    <div class="detail-hero-placeholder">🌅</div>
+    {% endif %}
+    {% endwith %}
+    <div class="detail-hero-overlay">
+      <a href="{% url 'spots:map' %}" class="back-btn">← 지도로</a>
+      <h1 class="detail-title">{{ spot.name }}</h1>
+      <p class="detail-address">📍 {{ spot.address }}</p>
+    </div>
+  </div>
+
+  <div class="detail-body">
+
+    <!-- 오늘의 노을 점수 -->
+    <div class="score-card">
+      <div class="score-left">
+        <div class="score-circle" style="--score: {{ score }}">
+          <span class="score-number">{{ score }}</span>
+          <span class="score-label">점</span>
+        </div>
+      </div>
+      <div class="score-right">
+        <h3 class="score-title">오늘의 노을 예보</h3>
+        <p class="score-desc">
+          일몰 방향 <strong>{{ sunset.direction_kor }} ({{ sunset.azimuth }}°)</strong> ·
+          일몰 시간 <strong>{{ sunset.sunset_time }}</strong>
+        </p>
+        {% if weather %}
+        <p class="score-weather">{{ weather.sunset_quality.emoji }} {{ weather.sunset_quality.level }} · 구름 {{ weather.clouds }}%</p>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- 점수 세부 내역 -->
+    <div class="score-breakdown">
+      <div class="score-breakdown-title">
+        <span>점수 산정 내역</span>
+        <button onclick="document.getElementById('criteria-detail').classList.toggle('hidden')">기준 보기 ▾</button>
+      </div>
+
+      <div class="score-bar-row">
+        <span class="score-bar-label">🧭 방향 일치도</span>
+        <div class="score-bar-track">
+          <div class="score-bar-fill" style="width:{% widthratio scores.direction 40 100 %}%;"></div>
+        </div>
+        <span class="score-bar-val">{{ scores.direction }} / 40</span>
+      </div>
+      <div class="score-bar-row">
+        <span class="score-bar-label">👁️ 시야 개방도</span>
+        <div class="score-bar-track">
+          <div class="score-bar-fill accent" style="width:{% widthratio scores.openness 30 100 %}%;"></div>
+        </div>
+        <span class="score-bar-val">{{ scores.openness }} / 30</span>
+      </div>
+      <div class="score-bar-row">
+        <span class="score-bar-label">🚗 접근 용이성</span>
+        <div class="score-bar-track">
+          <div class="score-bar-fill success" style="width:{% widthratio scores.accessibility 20 100 %}%;"></div>
+        </div>
+        <span class="score-bar-val">{{ scores.accessibility }} / 20</span>
+      </div>
+      {% if scores.official %}
+      <div class="score-bar-row">
+        <span class="score-bar-label">🏛️ 공식 관광지</span>
+        <div class="score-bar-track">
+          <div class="score-bar-fill warning" style="width:100%;"></div>
+        </div>
+        <span class="score-bar-val">+{{ scores.official }}</span>
+      </div>
+      {% endif %}
+
+      <div id="criteria-detail" class="hidden" style="margin-top:12px;padding-top:12px;border-top:1px solid var(--border);">
+        <p style="font-size:12px;color:var(--text-muted);line-height:1.8;">
+          <strong>방향 일치도 (40점)</strong> — 오늘의 실제 일몰 방위각과 이 명소의 조망 방위각 차이로 계산<br>
+          <strong>시야 개방도 (30점)</strong> — 완전개방 30 / 양호 20 / 부분차단 10<br>
+          <strong>접근 용이성 (20점)</strong> — 매우좋음 20 / 좋음 15 / 보통 10 / 어려움 5<br>
+          <strong>공식 관광지 보너스 (10점)</strong> — 제주도 지정 관광지·국립공원 등
+        </p>
+      </div>
+    </div>
+
+    <!-- 명소 설명 -->
+    <div class="detail-section">
+      <p class="detail-desc">{{ spot.description }}</p>
+      {% if spot.get_tags_list %}
+      <div class="tags">
+        {% for tag in spot.get_tags_list %}
+        <span class="tag"># {{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+
+    <!-- 예시 사진 갤러리 -->
+    {% if photos %}
+    <div class="detail-section">
+      <h2 class="section-title">📸 예시 사진</h2>
+      <div class="photo-grid">
+        {% for photo in photos %}
+        <div class="photo-item" onclick="openPhotoModal('{{ photo.image.url }}', '{{ photo.caption }}')">
+          <img src="{{ photo.image.url }}" alt="{{ photo.caption }}" loading="lazy">
+          {% if photo.caption %}<div class="photo-caption">{{ photo.caption }}</div>{% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- 날씨 정보 -->
+    {% if weather %}
+    <div class="detail-section">
+      <h2 class="section-title">🌤 현재 날씨</h2>
+      <div class="weather-card">
+        <div class="weather-row">
+          <img src="https://openweathermap.org/img/wn/{{ weather.icon }}@2x.png" class="weather-icon-img" alt="{{ weather.description }}">
+          <div>
+            <div class="weather-temp">{{ weather.temp }}°C</div>
+            <div class="weather-desc">{{ weather.description }}</div>
+          </div>
+        </div>
+        <div class="weather-details">
+          <div class="weather-item">💧 습도 {{ weather.humidity }}%</div>
+          <div class="weather-item">💨 바람 {{ weather.wind_speed }}km/h</div>
+          <div class="weather-item">☁️ 구름 {{ weather.clouds }}%</div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- 후기 목록 -->
+    <div class="detail-section">
+      <h2 class="section-title">💬 방문 후기 <span class="review-count">({{ reviews.count }}개)</span></h2>
+
+      {% if not user_review %}
+      <button class="btn btn-primary" onclick="toggleReviewForm()">✏️ 후기 작성하기</button>
+
+      <!-- 후기 작성 폼 -->
+      <div id="review-form-wrapper" class="review-form-wrapper hidden">
+        <h3 class="form-section-title">후기 작성</h3>
+        <form method="post" action="{% url 'spots:review_create' spot.pk %}" enctype="multipart/form-data" class="review-form">
+          {% csrf_token %}
+          {% for field in form %}
+          <div class="form-group">
+            <label class="form-label">{{ field.label }}</label>
+            {{ field }}
+            {% if field.errors %}
+            <span class="form-error">{{ field.errors.0 }}</span>
+            {% endif %}
+          </div>
+          {% endfor %}
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">후기 등록</button>
+            <button type="button" class="btn btn-secondary" onclick="toggleReviewForm()">취소</button>
+          </div>
+        </form>
+      </div>
+      {% else %}
+      <p class="already-reviewed">✅ 이미 후기를 남기셨습니다.</p>
+      {% endif %}
+
+      <!-- 후기 리스트 -->
+      <div class="reviews-list">
+        {% for review in reviews %}
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-meta">
+              <span class="review-user">{{ review.user.username }}</span>
+              <span class="review-stars">{{ review.get_stars }}</span>
+              <span class="review-date">{{ review.visit_date }}</span>
+            </div>
+            {% if request.user == review.user or request.user.is_staff %}
+            <form method="post" action="{% url 'spots:review_delete' review.pk %}" onsubmit="return confirm('후기를 삭제하시겠습니까?')">
+              {% csrf_token %}
+              <button type="submit" class="btn-delete">삭제</button>
+            </form>
+            {% endif %}
+          </div>
+          <p class="review-content">{{ review.content }}</p>
+          {% with img=review.get_image %}{% if img %}
+          <div class="review-media">
+            <img src="{{ img }}" alt="후기 사진" class="review-img" onclick="openPhotoModal('{{ img }}', '')">
+          </div>
+          {% endif %}{% endwith %}
+          {% if review.video %}
+          <div class="review-media">
+            <video src="{{ review.video.url }}" controls class="review-video" preload="metadata"></video>
+          </div>
+          {% endif %}
+          <span class="review-time">{{ review.created_at|date:"Y.m.d H:i" }}</span>
+        </div>
+        {% empty %}
+        <div class="no-reviews">
+          <p>아직 후기가 없어요. 첫 번째 후기를 남겨보세요! 🌅</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- 사진 확대 모달 -->
+<div id="photo-modal" class="modal hidden" onclick="closePhotoModal()">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closePhotoModal()">✕</button>
+    <img id="modal-img" src="" alt="" class="modal-img">
+    <p id="modal-caption" class="modal-caption"></p>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+  function openPhotoModal(url, caption) {
+    document.getElementById('modal-img').src = url;
+    document.getElementById('modal-caption').textContent = caption;
+    document.getElementById('photo-modal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closePhotoModal() {
+    document.getElementById('photo-modal').classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  function toggleReviewForm() {
+    const wrapper = document.getElementById('review-form-wrapper');
+    wrapper.classList.toggle('hidden');
+    if (!wrapper.classList.contains('hidden')) {
+      wrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closePhotoModal();
+  });
+</script>
+{% endblock %}

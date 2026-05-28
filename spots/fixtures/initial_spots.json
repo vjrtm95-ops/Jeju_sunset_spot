@@ -1,0 +1,607 @@
+[
+  {
+    "model": "spots.spot", "pk": 1,
+    "fields": {
+      "name": "협재해수욕장", "description": "제주 서쪽 대표 노을 명소. 에메랄드빛 바다와 비양도가 어우러진 황금빛 노을이 압권입니다. 노을 사진 찍기 최고의 장소로 손꼽혀요.",
+      "address": "제주특별자치도 제주시 한림읍 협재리", "latitude": 33.3945, "longitude": 126.2396, "view_azimuth": 270.0,
+      "view_openness": 3, "accessibility": 4, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "해변,비양도뷰,사진맛집,주차가능,노을최고", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 2,
+    "fields": {
+      "name": "곽지해수욕장", "description": "협재와 가까운 서쪽 해변. 한적해서 노을을 여유롭게 즐길 수 있어요. 과물노천탕도 근처에 있어 함께 즐기기 좋습니다.",
+      "address": "제주특별자치도 제주시 애월읍 곽지리", "latitude": 33.3964, "longitude": 126.2652, "view_azimuth": 265.0,
+      "view_openness": 3, "accessibility": 4, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "해변,한적함,노을,과물노천탕", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 3,
+    "fields": {
+      "name": "한담해변", "description": "애월읍의 아기자기한 해변. 카페와 함께 즐기는 노을이 인기입니다. 해안도로를 따라 걸으며 보는 노을도 아름다워요.",
+      "address": "제주특별자치도 제주시 애월읍 애월리", "latitude": 33.4075, "longitude": 126.2297, "view_azimuth": 275.0,
+      "view_openness": 3, "accessibility": 3, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1542296332-2b4473fac56e?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "해변,카페거리,애월,감성", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 4,
+    "fields": {
+      "name": "금능해수욕장", "description": "협재 바로 옆 조용한 해변. 비양도를 정면으로 바라보며 노을을 감상할 수 있습니다. 현지인들이 더 좋아하는 숨은 명소.",
+      "address": "제주특별자치도 제주시 한림읍 금능리", "latitude": 33.3895, "longitude": 126.2343, "view_azimuth": 268.0,
+      "view_openness": 3, "accessibility": 4, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "해변,비양도뷰,한적함,숨은명소", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 5,
+    "fields": {
+      "name": "이호테우해변", "description": "제주 시내에서 가장 가까운 노을 명소. 빨간 등대와 하얀 등대가 포인트! 제주공항 근처라 접근성이 최고입니다.",
+      "address": "제주특별자치도 제주시 도두일동", "latitude": 33.5063, "longitude": 126.4448, "view_azimuth": 300.0,
+      "view_openness": 3, "accessibility": 4, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1506477331477-33d5d8b3dc85?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "등대,접근성좋음,제주시내,말모양등대", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 6,
+    "fields": {
+      "name": "애월해안도로", "description": "애월읍 해안을 따라 이어진 드라이브 코스. 차를 세우고 아무 곳에서나 노을을 감상할 수 있어요. 카페도 많아 여유롭게 즐기기 좋습니다.",
+      "address": "제주특별자치도 제주시 애월읍 애월해안로", "latitude": 33.4640, "longitude": 126.3058, "view_azimuth": 280.0,
+      "view_openness": 3, "accessibility": 4, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "드라이브,해안도로,카페,여유", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 7,
+    "fields": {
+      "name": "수월봉", "description": "제주 최서단 화산 절벽. 차귀도를 배경으로 수평선 너머로 지는 노을이 환상적입니다. 지질트레일 코스로도 유명해요.",
+      "address": "제주특별자치도 제주시 한경면 고산리", "latitude": 33.2933, "longitude": 126.1642, "view_azimuth": 260.0,
+      "view_openness": 3, "accessibility": 3, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "절벽,차귀도뷰,지질트레일,최서단", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 8,
+    "fields": {
+      "name": "신창풍차해안", "description": "바람이 많기로 유명한 제주 서쪽 해안. 풍력발전기와 노을이 어우러진 이색 풍경으로 인스타 명소입니다.",
+      "address": "제주특별자치도 제주시 한경면 신창리", "latitude": 33.3196, "longitude": 126.1546, "view_azimuth": 262.0,
+      "view_openness": 3, "accessibility": 4, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1439694458393-78ecf14a7c92?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "풍차,풍력발전,인스타,서쪽해안", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 9,
+    "fields": {
+      "name": "차귀도 전망대", "description": "제주 최서단 무인도 차귀도를 바라보는 전망대. 섬 너머로 지는 노을이 신비로운 분위기를 연출합니다.",
+      "address": "제주특별자치도 제주시 한경면 용수리", "latitude": 33.3117, "longitude": 126.1697, "view_azimuth": 258.0,
+      "view_openness": 3, "accessibility": 3, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "차귀도,무인도뷰,전망대,최서단", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 10,
+    "fields": {
+      "name": "한경 저지오름 방향", "description": "한경면 들판에서 바라보는 노을. 오름과 들판이 실루엣으로 물드는 광활한 풍경입니다.",
+      "address": "제주특별자치도 제주시 한경면", "latitude": 33.3380, "longitude": 126.2060, "view_azimuth": 265.0,
+      "view_openness": 3, "accessibility": 3, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1495107334309-fcf20504a5ab?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "들판,오름실루엣,한경,광활함", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 11,
+    "fields": {
+      "name": "산방산", "description": "제주 남서부의 상징적인 용암 돔. 산방산 앞 해변에서 바라보는 노을은 산 실루엣과 바다가 어우러져 압도적입니다.",
+      "address": "제주특별자치도 서귀포시 안덕면 사계리", "latitude": 33.2380, "longitude": 126.3147, "view_azimuth": 258.0,
+      "view_openness": 3, "accessibility": 4, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "용암돔,상징,사계해변,남서부", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 12,
+    "fields": {
+      "name": "용머리해안", "description": "산방산 아래 기이한 해안 절벽. 파도가 깎아 만든 웅장한 지층과 함께 서쪽 노을을 감상할 수 있습니다.",
+      "address": "제주특별자치도 서귀포시 안덕면 사계리", "latitude": 33.2322, "longitude": 126.3102, "view_azimuth": 255.0,
+      "view_openness": 3, "accessibility": 3, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "해안절벽,지층,산방산,웅장", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 13,
+    "fields": {
+      "name": "사계해변", "description": "산방산을 뒤로 하고 바라보는 형제섬 노을. 물이 빠지면 바닷속 화석도 볼 수 있는 특별한 해변입니다.",
+      "address": "제주특별자치도 서귀포시 안덕면 사계리", "latitude": 33.2279, "longitude": 126.3186, "view_azimuth": 260.0,
+      "view_openness": 3, "accessibility": 4, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "형제섬,화석해변,산방산뷰,조용함", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 14,
+    "fields": {
+      "name": "송악산", "description": "제주 남서쪽 오름. 정상에서 형제섬과 가파도가 한눈에 내려다 보이며, 서쪽 바다로 지는 노을이 장관입니다.",
+      "address": "제주특별자치도 서귀포시 대정읍 상모리", "latitude": 33.2188, "longitude": 126.3162, "view_azimuth": 260.0,
+      "view_openness": 3, "accessibility": 3, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "오름,형제섬뷰,트레킹,남서쪽", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 15,
+    "fields": {
+      "name": "외돌개", "description": "서귀포 바다 위로 우뚝 솟은 20m 높이의 돌기둥. 황혼 무렵 주황빛으로 물드는 바위와 바다 풍경이 환상적입니다.",
+      "address": "제주특별자치도 서귀포시 서홍동", "latitude": 33.2393, "longitude": 126.5561, "view_azimuth": 200.0,
+      "view_openness": 3, "accessibility": 3, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "기암,돌기둥,서귀포,황혼", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 16,
+    "fields": {
+      "name": "황우지해안", "description": "외돌개 근처 숨겨진 해안. 절벽 아래 에메랄드빛 물웅덩이와 함께 즐기는 노을이 특별합니다.",
+      "address": "제주특별자치도 서귀포시 서홍동", "latitude": 33.2404, "longitude": 126.5534, "view_azimuth": 195.0,
+      "view_openness": 2, "accessibility": 2, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "숨은해안,에메랄드,절벽,스노클링", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 17,
+    "fields": {
+      "name": "대포주상절리", "description": "중문 해안의 육각형 현무암 기둥. 파도가 부서지는 주상절리 위에서 바라보는 남쪽 바다 노을이 웅장합니다.",
+      "address": "제주특별자치도 서귀포시 중문동", "latitude": 33.2422, "longitude": 126.4264, "view_azimuth": 210.0,
+      "view_openness": 3, "accessibility": 4, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "주상절리,현무암,중문,파도", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 18,
+    "fields": {
+      "name": "중문색달해변", "description": "중문관광단지 앞 넓은 해변. 검은 모래와 노란 모래가 섞인 특이한 해변으로 서쪽 노을과 함께 아름다운 풍경을 연출합니다.",
+      "address": "제주특별자치도 서귀포시 색달동", "latitude": 33.2460, "longitude": 126.4122, "view_azimuth": 230.0,
+      "view_openness": 3, "accessibility": 4, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "해변,중문,검은모래,서퍼", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 19,
+    "fields": {
+      "name": "화순금모래해변", "description": "서귀포 서쪽 한적한 해변. 산방산을 배경으로 서쪽 바다로 지는 노을을 여유롭게 감상하기 좋습니다.",
+      "address": "제주특별자치도 서귀포시 안덕면 화순리", "latitude": 33.2505, "longitude": 126.3399, "view_azimuth": 248.0,
+      "view_openness": 3, "accessibility": 4, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "해변,한적함,산방산뷰,서귀포서쪽", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 20,
+    "fields": {
+      "name": "모슬포항", "description": "마라도 가는 배가 출발하는 항구. 어선이 있는 항구 노을 풍경이 독특하고 아름다우며 신선한 활어도 즐길 수 있습니다.",
+      "address": "제주특별자치도 서귀포시 대정읍 하모리", "latitude": 33.2148, "longitude": 126.2518, "view_azimuth": 255.0,
+      "view_openness": 3, "accessibility": 4, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1511316154133-0786b446fec6?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "항구,어선,마라도,남서부", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 21,
+    "fields": {
+      "name": "새별오름", "description": "제주 중산간의 아름다운 오름. 억새로 유명하며 정상에 오르면 서쪽 바다와 한라산이 한눈에 보이는 파노라마 노을을 즐길 수 있어요.",
+      "address": "제주특별자치도 제주시 애월읍 봉성리", "latitude": 33.3737, "longitude": 126.3226, "view_azimuth": 270.0,
+      "view_openness": 3, "accessibility": 2, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "오름,억새,파노라마,중산간,가을", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 22,
+    "fields": {
+      "name": "금오름", "description": "분화구 안에 호수가 있는 신비로운 오름. 정상에서 바라보는 한라산과 서쪽 바다가 한 프레임에 담기며 노을이 아름답습니다.",
+      "address": "제주특별자치도 제주시 한림읍 금악리", "latitude": 33.3491, "longitude": 126.2918, "view_azimuth": 268.0,
+      "view_openness": 3, "accessibility": 2, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "오름,분화구호수,한라산뷰,신비", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 23,
+    "fields": {
+      "name": "저지오름", "description": "한경면 중산간에 위치한 한적한 오름. 사방이 트여 제주 서쪽 바다와 오름들이 이어지는 광활한 노을을 감상하기 좋습니다.",
+      "address": "제주특별자치도 제주시 한경면 저지리", "latitude": 33.3478, "longitude": 126.2218, "view_azimuth": 265.0,
+      "view_openness": 3, "accessibility": 2, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "오름,한적함,중산간,광활함", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 24,
+    "fields": {
+      "name": "군산오름", "description": "서귀포 중산간의 독립 오름. 해발 334m로 높지 않지만 서쪽으로 탁 트인 전망이 일품이며 산방산과 바다가 함께 보입니다.",
+      "address": "제주특별자치도 서귀포시 안덕면 창천리", "latitude": 33.2875, "longitude": 126.3491, "view_azimuth": 255.0,
+      "view_openness": 3, "accessibility": 2, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "오름,중산간,산방산뷰,334m", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 25,
+    "fields": {
+      "name": "물메오름", "description": "안덕면 조용한 중산간 오름. 정상에서 서쪽 바다와 한라산 남벽이 동시에 보이는 독특한 노을 명소입니다.",
+      "address": "제주특별자치도 서귀포시 안덕면 덕수리", "latitude": 33.2958, "longitude": 126.3197, "view_azimuth": 252.0,
+      "view_openness": 3, "accessibility": 2, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1500627869374-13cd993b1115?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "오름,중산간,한라산남벽,조용함", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 26,
+    "fields": {
+      "name": "어리목 탐방로", "description": "한라산 어리목 코스 입구. 울창한 숲 사이 탁 트인 고지대에서 서쪽 하늘을 물들이는 노을을 만날 수 있습니다.",
+      "address": "제주특별자치도 제주시 해안동", "latitude": 33.3792, "longitude": 126.4386, "view_azimuth": 270.0,
+      "view_openness": 2, "accessibility": 3, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "한라산,고지대,트레킹,숲길", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 27,
+    "fields": {
+      "name": "영실기암", "description": "한라산 영실 코스의 기암 절벽 지대. 500m 수직 절벽과 함께 서쪽으로 펼쳐지는 노을이 신비롭고 장엄합니다.",
+      "address": "제주특별자치도 서귀포시 색달동", "latitude": 33.3335, "longitude": 126.4629, "view_azimuth": 250.0,
+      "view_openness": 2, "accessibility": 2, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "한라산,기암절벽,트레킹,웅장", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 28,
+    "fields": {
+      "name": "1100고지 습지", "description": "한라산 1100고지 도로변 습지. 해발 1100m에서 보는 노을은 구름이 발 아래로 깔리는 운해와 함께 천상의 풍경을 연출합니다.",
+      "address": "제주특별자치도 서귀포시 중문동", "latitude": 33.3601, "longitude": 126.4738, "view_azimuth": 270.0,
+      "view_openness": 3, "accessibility": 4, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "고지대,운해,1100m,도로접근", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 29,
+    "fields": {
+      "name": "어승생악", "description": "한라산 북서쪽 오름. 제주 시내와 서쪽 바다가 한눈에 보이는 고지대 전망 오름으로 노을 시간이 특히 아름답습니다.",
+      "address": "제주특별자치도 제주시 해안동", "latitude": 33.3898, "longitude": 126.4418, "view_azimuth": 285.0,
+      "view_openness": 3, "accessibility": 2, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1472214222555-d404758b1c42?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "오름,고지대,제주시내뷰,북서쪽", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 30,
+    "fields": {
+      "name": "도두봉", "description": "제주시내 도두항 옆 오름. 오르기 쉽고, 정상에서 제주공항과 바다를 배경으로 하는 노을이 특별합니다.",
+      "address": "제주특별자치도 제주시 도두일동", "latitude": 33.5110, "longitude": 126.4632, "view_azimuth": 295.0,
+      "view_openness": 3, "accessibility": 3, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1533467686129-a1789c646bbf?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "오름,접근쉬움,공항뷰,도두항", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 31,
+    "fields": {
+      "name": "용두암", "description": "용이 하늘로 올라가다 바위가 된 전설의 장소. 제주시내 북쪽 바닷가에서 보는 석양이 인상적입니다.",
+      "address": "제주특별자치도 제주시 용담이동", "latitude": 33.5170, "longitude": 126.5030, "view_azimuth": 290.0,
+      "view_openness": 3, "accessibility": 4, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1566041510394-cf7c8fe21800?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "바위,전설,제주시내,북쪽해안", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 32,
+    "fields": {
+      "name": "성산일출봉", "description": "유네스코 세계자연유산. 일출로 유명하지만 석양도 아름답습니다. 성산항에서 바라보면 봉우리 뒤로 지는 노을이 드라마틱합니다.",
+      "address": "제주특별자치도 서귀포시 성산읍 성산리", "latitude": 33.4580, "longitude": 126.9425, "view_azimuth": 90.0,
+      "view_openness": 3, "accessibility": 3, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "유네스코,일출,동쪽,해돋이", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 33,
+    "fields": {
+      "name": "광치기해변", "description": "성산일출봉 바로 옆 해변. 갈색 현무암 암반과 함께 성산봉 실루엣을 배경으로 동쪽 노을빛이 물드는 이색 풍경입니다.",
+      "address": "제주특별자치도 서귀포시 성산읍 고성리", "latitude": 33.4517, "longitude": 126.9230, "view_azimuth": 80.0,
+      "view_openness": 3, "accessibility": 4, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "해변,현무암,성산봉뷰,암반", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 34,
+    "fields": {
+      "name": "다랑쉬오름", "description": "동부 중산간 최고의 오름 전망대. 분화구가 완벽하게 보존된 오름으로 정상에서 우도와 성산까지 동쪽 파노라마를 즐길 수 있습니다.",
+      "address": "제주특별자치도 제주시 구좌읍 세화리", "latitude": 33.4629, "longitude": 126.8267, "view_azimuth": 95.0,
+      "view_openness": 3, "accessibility": 2, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "오름,분화구,우도뷰,동부파노라마", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 35,
+    "fields": {
+      "name": "용눈이오름", "description": "완만한 능선이 아름다운 동부 오름. 억새와 함께 보는 동쪽 노을빛이 매우 감성적입니다. 사진작가들이 즐겨 찾는 곳.",
+      "address": "제주특별자치도 제주시 구좌읍 종달리", "latitude": 33.4591, "longitude": 126.8067, "view_azimuth": 100.0,
+      "view_openness": 3, "accessibility": 2, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "오름,억새,사진명소,완만한능선", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 36,
+    "fields": {
+      "name": "따라비오름", "description": "3개의 분화구를 가진 희귀한 오름. 능선을 따라 걷다 보면 남쪽과 동쪽 바다가 펼쳐지며 노을빛으로 물드는 장관을 연출합니다.",
+      "address": "제주특별자치도 서귀포시 표선면 가시리", "latitude": 33.3671, "longitude": 126.7416, "view_azimuth": 200.0,
+      "view_openness": 3, "accessibility": 2, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "오름,3분화구,능선트레킹,남동쪽", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 37,
+    "fields": {
+      "name": "산굼부리", "description": "제주 유일의 마르형 분화구. 분화구 가장자리에서 내려다보는 억새와 한라산이 함께 만드는 노을은 환상적입니다.",
+      "address": "제주특별자치도 제주시 조천읍 교래리", "latitude": 33.4397, "longitude": 126.6944, "view_azimuth": 265.0,
+      "view_openness": 3, "accessibility": 3, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1510784722466-f2aa9c52fff6?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "분화구,마르형,억새,천연기념물", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 38,
+    "fields": {
+      "name": "아부오름", "description": "아담하지만 전망 좋은 동부 중산간 오름. 정상 분화구 안쪽 잔디밭에서 사방으로 펼쳐지는 노을 풍경이 아늑합니다.",
+      "address": "제주특별자치도 제주시 구좌읍 송당리", "latitude": 33.4513, "longitude": 126.7601, "view_azimuth": 105.0,
+      "view_openness": 3, "accessibility": 2, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "오름,분화구잔디,아늑함,동부", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 39,
+    "fields": {
+      "name": "높은오름", "description": "해발 324m 동부 중산간 오름. 이름처럼 사방이 내려다보이는 탁월한 전망을 자랑하며 저녁 노을빛이 특히 아름답습니다.",
+      "address": "제주특별자치도 제주시 구좌읍 송당리", "latitude": 33.4458, "longitude": 126.7781, "view_azimuth": 100.0,
+      "view_openness": 3, "accessibility": 2, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "오름,324m,파노라마,동부", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 40,
+    "fields": {
+      "name": "지미봉", "description": "제주 동쪽 끝 오름. 우도와 성산일출봉, 동쪽 바다가 한눈에 보이는 최동단 오름으로 새벽 해돋이와 저녁 노을 모두 압권입니다.",
+      "address": "제주특별자치도 제주시 구좌읍 종달리", "latitude": 33.5186, "longitude": 126.8920, "view_azimuth": 80.0,
+      "view_openness": 3, "accessibility": 2, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "오름,우도뷰,최동단,일출일몰", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 41,
+    "fields": {
+      "name": "두산봉", "description": "성산 인근 오름. 정상 분화구에서 성산일출봉과 우도가 정면으로 보이는 동쪽 최고의 전망대 오름입니다.",
+      "address": "제주특별자치도 서귀포시 성산읍 오조리", "latitude": 33.4298, "longitude": 126.9072, "view_azimuth": 88.0,
+      "view_openness": 3, "accessibility": 2, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1507090960745-b32f65d3113a?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "오름,성산봉뷰,우도뷰,분화구", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 42,
+    "fields": {
+      "name": "오조리 해안", "description": "성산 바로 맞은편 한적한 마을 해안. 성산일출봉과 수면 반영이 어우러지는 노을 풍경이 고요하고 아름답습니다.",
+      "address": "제주특별자치도 서귀포시 성산읍 오조리", "latitude": 33.4382, "longitude": 126.9127, "view_azimuth": 85.0,
+      "view_openness": 3, "accessibility": 4, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "해안,성산봉반영,고요함,마을", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 43,
+    "fields": {
+      "name": "서우봉", "description": "함덕 해변 옆 오름. 정상에서 함덕 에메랄드 바다와 북쪽 해안이 한눈에 보이며 저녁 노을이 바다를 황금빛으로 물들입니다.",
+      "address": "제주특별자치도 제주시 조천읍 함덕리", "latitude": 33.5498, "longitude": 126.6685, "view_azimuth": 315.0,
+      "view_openness": 3, "accessibility": 2, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1444492417551-9ee7476772df?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "오름,함덕해변뷰,북쪽해안,에메랄드", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 44,
+    "fields": {
+      "name": "함덕해수욕장", "description": "에메랄드빛 바다로 유명한 제주 북동쪽 해변. 서우봉을 배경으로 북서쪽 하늘이 노랗게 물드는 노을이 아름답습니다.",
+      "address": "제주특별자치도 제주시 조천읍 함덕리", "latitude": 33.5436, "longitude": 126.6673, "view_azimuth": 320.0,
+      "view_openness": 3, "accessibility": 4, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1520116468816-95b69f847357?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "해변,에메랄드,서우봉,북동쪽", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 45,
+    "fields": {
+      "name": "월정리해변", "description": "인스타 핫플레이스. 에메랄드 바다와 하얀 모래, 이국적인 분위기의 카페들이 늘어선 제주 동북쪽 해변. 북쪽 방향 노을이 인상적입니다.",
+      "address": "제주특별자치도 제주시 구좌읍 월정리", "latitude": 33.5544, "longitude": 126.7973, "view_azimuth": 330.0,
+      "view_openness": 3, "accessibility": 4, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1515238152791-8216bfdf89a7?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "인스타,카페거리,에메랄드,동북쪽", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 46,
+    "fields": {
+      "name": "세화해변", "description": "오일장으로 유명한 세화리의 해변. 북쪽 바다가 탁 트여 있어 맑은 날 수평선 너머로 지는 석양이 시원합니다.",
+      "address": "제주특별자치도 제주시 구좌읍 세화리", "latitude": 33.5491, "longitude": 126.8426, "view_azimuth": 335.0,
+      "view_openness": 3, "accessibility": 4, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1501426026826-31c667bdf23d?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "해변,오일장,북쪽해안,한적함", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 47,
+    "fields": {
+      "name": "섭지코지", "description": "제주 동쪽 돌출 해안. 유채꽃밭, 성산일출봉, 유리성이 어우러지는 이색 풍경. 남동쪽 해안 노을이 웅장합니다.",
+      "address": "제주특별자치도 서귀포시 성산읍 신양리", "latitude": 33.4240, "longitude": 126.9304, "view_azimuth": 150.0,
+      "view_openness": 3, "accessibility": 3, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1540206395-68808572332f?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "유채꽃,성산봉뷰,유리성,동쪽끝", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 48,
+    "fields": {
+      "name": "표선해비치해변", "description": "제주 동남쪽 넓은 백사장 해변. 썰물 때 드러나는 모래사장이 광활하게 펼쳐지며 동쪽 바다 노을빛이 아름답습니다.",
+      "address": "제주특별자치도 서귀포시 표선면 표선리", "latitude": 33.3272, "longitude": 126.8367, "view_azimuth": 140.0,
+      "view_openness": 3, "accessibility": 4, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "해변,백사장,동남쪽,썰물모래밭", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 49,
+    "fields": {
+      "name": "쇠소깍", "description": "검은 현무암 협곡을 따라 흐르는 강과 바다가 만나는 곳. 투명 카약을 타고 보는 노을빛 협곡 풍경이 낭만적입니다.",
+      "address": "제주특별자치도 서귀포시 하효동", "latitude": 33.2568, "longitude": 126.6369, "view_azimuth": 165.0,
+      "view_openness": 2, "accessibility": 3, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "협곡,카약,강과바다,현무암", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 50,
+    "fields": {
+      "name": "제주항 구항", "description": "제주 북쪽 구도심 항구. 여객선과 어선이 오가는 항구에서 북서쪽 바다를 배경으로 도시의 일상과 어우러진 노을을 즐길 수 있습니다.",
+      "address": "제주특별자치도 제주시 건입동", "latitude": 33.5244, "longitude": 126.5257, "view_azimuth": 295.0,
+      "view_openness": 3, "accessibility": 4, "is_official": false,
+      "cover_url": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "항구,도시노을,북쪽해안,일상", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 51,
+    "fields": {
+      "name": "비양도", "description": "협재 앞바다의 작은 섬. 섬 정상에서 제주 서쪽 해안 전체를 내려다보며 즐기는 노을은 '제주 최고의 노을'로 손꼽힙니다.",
+      "address": "제주특별자치도 제주시 한림읍 비양리", "latitude": 33.4234, "longitude": 126.2085, "view_azimuth": 265.0,
+      "view_openness": 3, "accessibility": 1, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1455587734955-081b22074882?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "섬,배이동,협재뷰,최고노을", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 52,
+    "fields": {
+      "name": "마라도", "description": "대한민국 최남단 섬. 사방이 바다로 둘러싸인 마라도에서 보는 노을은 땅끝 감성이 더해져 특별합니다.",
+      "address": "제주특별자치도 서귀포시 대정읍 가파리", "latitude": 33.1215, "longitude": 126.2676, "view_azimuth": 255.0,
+      "view_openness": 3, "accessibility": 1, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1504893524553-ac55fce698be?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "최남단,섬,배이동,360도바다", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 53,
+    "fields": {
+      "name": "가파도", "description": "청보리밭으로 유명한 마라도 옆 섬. 봄에는 청보리와 함께, 다른 계절엔 탁 트인 바다와 함께 환상적인 노을을 즐길 수 있습니다.",
+      "address": "제주특별자치도 서귀포시 대정읍 가파리", "latitude": 33.1706, "longitude": 126.2660, "view_azimuth": 258.0,
+      "view_openness": 3, "accessibility": 1, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "섬,청보리,배이동,남쪽바다", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 54,
+    "fields": {
+      "name": "우도 서빈백사", "description": "우도의 하얀 산호 모래 해변. 제주 본섬을 바라보며 서쪽 노을을 즐길 수 있는 우도 최고의 노을 명소입니다.",
+      "address": "제주특별자치도 제주시 우도면 연평리", "latitude": 33.5131, "longitude": 126.9282, "view_azimuth": 270.0,
+      "view_openness": 3, "accessibility": 1, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1542259005-4f346b3c9904?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "섬,배이동,산호모래,우도", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "spots.spot", "pk": 55,
+    "fields": {
+      "name": "칠십리공원", "description": "서귀포시 앞바다 전망 공원. 문섬·범섬이 보이는 남쪽 바다로 지는 석양을 서귀포 시내에서 가장 편하게 즐길 수 있는 장소입니다.",
+      "address": "제주특별자치도 서귀포시 서귀동", "latitude": 33.2481, "longitude": 126.5609, "view_azimuth": 195.0,
+      "view_openness": 3, "accessibility": 4, "is_official": true,
+      "cover_url": "https://images.unsplash.com/photo-1465146633011-14f8e0781093?auto=format&fit=crop&w=1200&q=80",
+      "example_image": null, "tags": "공원,문섬,범섬,서귀포시내", "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z", "updated_at": "2024-01-01T00:00:00Z"
+    }
+  }
+]

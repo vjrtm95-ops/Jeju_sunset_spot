@@ -1,0 +1,11 @@
+Django>=5.1,<6.0
+gunicorn>=21.0
+whitenoise>=6.6
+Pillow>=10.0
+astral>=3.2
+requests>=2.31
+python-decouple>=3.8
+psycopg2-binary>=2.9
+dj-database-url>=2.1
+cloudinary>=1.40
+django-cloudinary-storage>=0.3
